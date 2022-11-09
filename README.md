@@ -1,6 +1,8 @@
 
 # Build a Drum Machine
 
+This is my solution to FreeCodeCamp javascript library to build a drum machine, dor this project I'm using ReactJs as the framework and sass for styling, the builder is vite.
+
 ## Objective: Build an app that is functionally similar to this: https://drum-machine.freecodecamp.rocks/.
 
 Fulfill the below user stories and get all of the tests to pass. Use whichever libraries or APIs you need. Give it your own personal style.
