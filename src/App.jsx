@@ -1,8 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.scss";
 
 function App() {
   const [drummerPower, setDrummerPower] = useState(true);
+
+  const handleKeyPressed = (e) => {
+  const pressedKey = e.key.slice().toUpperCase()
+    console.log(pressedKey)
+    const audioFile = document.getElementById(pressedKey);
+    if(drummerPower && audioFile){
+      audioFile.play()
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyPressed)
+  }, [])
+
 
   const [displayText, setDisplayTest] = useState("");
 
@@ -12,7 +26,7 @@ function App() {
       setDisplayTest("");
     }
   };
-  const handleKeyPress = (e) => {
+  const handleKeyClick = (e) => {
     const options = {
       "Heater-1": "Q",
       "Heater-2": "W",
@@ -53,7 +67,7 @@ function App() {
         <div className="main-content-wrapper">
           <div className="pad__bank">
             <div
-              onClick={(e) => handleKeyPress(e)}
+              onClick={(e) => handleKeyClick(e)}
               id="Heater-1"
               className="drum-pad"
             >
@@ -65,7 +79,7 @@ function App() {
               ></audio>
             </div>
             <div
-              onClick={(e) => handleKeyPress(e)}
+              onClick={(e) => handleKeyClick(e)}
               id="Heater-2"
               className="drum-pad"
             >
@@ -77,7 +91,7 @@ function App() {
               ></audio>
             </div>
             <div
-              onClick={(e) => handleKeyPress(e)}
+              onClick={(e) => handleKeyClick(e)}
               id="Heater-3"
               className="drum-pad"
             >
@@ -89,7 +103,7 @@ function App() {
               ></audio>
             </div>
             <div
-              onClick={(e) => handleKeyPress(e)}
+              onClick={(e) => handleKeyClick(e)}
               id="Cev_H2"
               className="drum-pad"
             >
@@ -101,7 +115,7 @@ function App() {
               A
             </div>
             <div
-              onClick={(e) => handleKeyPress(e)}
+              onClick={(e) => handleKeyClick(e)}
               id="Heater-4"
               className="drum-pad"
             >
@@ -113,7 +127,7 @@ function App() {
               S
             </div>
             <div
-              onClick={(e) => handleKeyPress(e)}
+              onClick={(e) => handleKeyClick(e)}
               id="Heater-6"
               className="drum-pad"
             >
@@ -125,7 +139,7 @@ function App() {
               D
             </div>
             <div
-              onClick={(e) => handleKeyPress(e)}
+              onClick={(e) => handleKeyClick(e)}
               id="Dsc_Oh"
               className="drum-pad"
             >
@@ -137,7 +151,7 @@ function App() {
               Z
             </div>
             <div
-              onClick={(e) => handleKeyPress(e)}
+              onClick={(e) => handleKeyClick(e)}
               id="Kick_n_Hat"
               className="drum-pad"
             >
@@ -149,7 +163,7 @@ function App() {
               X
             </div>
             <div
-              onClick={(e) => handleKeyPress(e)}
+              onClick={(e) => handleKeyClick(e)}
               id="RP4_Kick"
               className="drum-pad"
             >
