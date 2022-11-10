@@ -8,18 +8,50 @@
     width: 100%;
 
     #drummer-machine{
-        width: 80%;
-        background-color: darkgray;
+        width: 40%;
+        background-color: #64a9ce;
         border-radius: 10px;
         padding: 1rem 2rem;
     }
 }
 
+.content-header{
+    display: flex;
+    margin-bottom: 1rem;
+    align-items: center;
+    justify-content: space-between  ;
+}
+
 #display{
-    width: 40%;
-    height: 30px;
-    background-color: red;
-    margin-bottom: 2rem;
+    width: 35%;
+    height: 40px;
+    background-color: gray;
+    border-radius: 5px;
+    margin-right: 3%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.switch{
+    width: 4rem;
+    height: 1.3rem;
+    background-color: wheat;
+    display: block;
+
+    .inner-switch{
+        width: 50%;
+        height: 100%;
+        background-color: black;
+    }
+    .float-left{
+        float: left;
+    }
+    .float-right{
+        float: right;
+    }
 }
 
 .pad__bank{
@@ -30,17 +62,27 @@
     width: 60%;
 }
 
+.main-content-wrapper{
+    display: flex;
+    flex-wrap: wrap-reverse;
+
+    .author-wrapper{
+        padding-left: 1rem;
+    }
+}
+
 .drum-pad{
     display: flex;
-    padding: 0 3rem;
+    padding: 0 1.5rem;
     margin: 0;
     width: 1rem;
-    background-color: blue;
+    background-color: #3d94c2;
     border-radius: 5px;
     justify-content: center;
     height: 3rem;
     align-items: center;
     display: flex;
+    box-shadow: black 3px 3px 5px;
 
     &:hover{
         background-color: darkcyan;
